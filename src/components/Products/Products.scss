@@ -1,0 +1,16 @@
+.products-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 20px;
+  .fa-trophy {
+    color: #faa515;
+    margin-right: 12px;
+  }
+  span {
+    color: #252627;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+}
