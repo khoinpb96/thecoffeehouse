@@ -29,6 +29,7 @@ export default function Membership() {
           <img
             src="https://www.thecoffeehouse.com/_nuxt/img/cf-bg.2a2088b.svg"
             className="col1-background-img"
+            alt="background"
           />
         </div>
         <div className="col2">

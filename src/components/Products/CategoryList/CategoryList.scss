@@ -1,0 +1,38 @@
+.category-list {
+  display: flex;
+  justify-content: center;
+}
+
+.category-card {
+  padding: 0.5rem 1rem;
+  margin-bottom: 14px;
+  a {
+  }
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    img {
+      height: 80%;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #fa8c16;
+    text-align: center;
+    max-width: 86px;
+    margin-top: 6px;
+  }
+}
+@media (max-width: 992px) {
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(3, 118px);
+  }
+}

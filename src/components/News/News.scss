@@ -1,0 +1,62 @@
+.news {
+  padding: 50px 0;
+  background: url(https://www.thecoffeehouse.com/_nuxt/img/flower.3438b10.svg)
+    center center no-repeat;
+  &-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    i {
+      color: #faa515;
+      margin-right: 12px;
+    }
+    span {
+      color: #252627;
+      font-size: 28px;
+      line-height: 26px;
+      font-weight: 600;
+    }
+  }
+  &-tab {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 40px;
+    border: 1px solid #ededed;
+    border-radius: 100px;
+    padding: 10px 30px;
+    cursor: pointer;
+    span {
+      margin: 0 15px;
+      color: rgba(38, 38, 38, 0.5);
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 30px;
+      padding: 0 10px;
+      white-space: nowrap;
+
+      &.active {
+        background: radial-gradient(
+          100% 488.28% at 0 100%,
+          #e87800 0,
+          #fa8c16 100%
+        );
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        border-radius: 100px;
+        height: 32px;
+        color: #fff;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .news-tab {
+    width: 100%;
+    span {
+      padding: unset;
+    }
+  }
+}

@@ -7,7 +7,7 @@ import home from "../../assets/images/home-solid.svg";
 import logoutIcon from "../../assets/images/logout.svg";
 import news from "../../assets/images/newspaper-solid.svg";
 import store from "../../assets/images/store-solid.svg";
-import "../../styles/Navbar.scss";
+import "./Navbar.scss";
 import Wrapper from "./Wrapper";
 
 export default function Navbar() {
@@ -15,14 +15,14 @@ export default function Navbar() {
   return (
     <nav>
       <Wrapper>
-        <Link to="/" to="/">
+        <Link to="/">
           <img
             src="https://www.thecoffeehouse.com/_nuxt/img/logo.174bdfd.svg"
             alt=""
             className="logo"
           />
         </Link>
-        <Link to="/" to="/">
+        <Link to="/">
           <div className="takeAway">
             <img
               src="https://minio.thecoffeehouse.com/images/tch-web-order/Pickup2.png"
@@ -37,33 +37,23 @@ export default function Navbar() {
         </Link>
         <ul className="nav-list">
           <li>
-            <Link to="/" to="/product-listing">
-              Đặt hàng
-            </Link>
+            <Link to="/product-listing">Đặt hàng</Link>
           </li>
           <li>
-            <Link to="/" to="/blogs">
-              Tin tức
-            </Link>
+            <Link to="/blogs">Tin tức</Link>
           </li>
           <li>
-            <Link to="/" to="/stores">
-              Cửa hàng
-            </Link>
+            <Link to="/stores">Cửa hàng</Link>
           </li>
           <li>
-            <Link to="/" to="/">
-              Khuyến mãi
-            </Link>
+            <Link to="/">Khuyến mãi</Link>
           </li>
           <li>
-            <Link to="/" to="/">
-              Tuyển dụng
-            </Link>
+            <Link to="/">Tuyển dụng</Link>
           </li>
         </ul>
         <div className="user-and-cart">
-          <Link to="/" to="/">
+          <Link to="/">
             <img
               src="https://www.thecoffeehouse.com/_nuxt/img/Login.70dc3d8.png"
               alt=""
@@ -85,7 +75,7 @@ export default function Navbar() {
               </div>
             )}
           </Link>
-          <Link to="/" to="/">
+          <Link to="/">
             <img
               src="https://www.thecoffeehouse.com/_nuxt/img/Carticon.373916c.png"
               alt=""
@@ -103,19 +93,19 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/product-listing">
               <img src={coffee} alt="" />
               Đặt hàng
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/blogs">
               <img src={news} alt="" />
               Tin tức
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/stores">
               <img src={store} alt="" />
               Cửa hàng
             </Link>
