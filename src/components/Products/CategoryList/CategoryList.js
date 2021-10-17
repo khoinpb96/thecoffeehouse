@@ -1,22 +1,20 @@
 import "./CategoryList.scss";
-import { Link } from "react-router-dom";
 
-export default function CaregoryList({ data, listNavigation }) {
+export default function CaregoryList({ data, listNavigation, listIndex }) {
   return (
     <div className="category-list">
       {data.map((item, index) => (
         <div className="category-card" key={item.id}>
-          <Link
-            to="/"
+          <span
             onClick={() => {
               listNavigation(index);
             }}
           >
-            <div className="circle">
+            <div className={listIndex === index ? "circle active" : "circle"}>
               <img src={item.thumbnail} alt={item.name} />
             </div>
             <p>{item.name}</p>
-          </Link>
+          </span>
         </div>
       ))}
     </div>

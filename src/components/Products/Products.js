@@ -56,6 +56,7 @@ export default function Products() {
           listNavigation={(i) => {
             setListIndex(i);
           }}
+          listIndex={listIndex}
         />
         <ItemList
           data={atHomePage ? listData.slice(0, 12) : listData}

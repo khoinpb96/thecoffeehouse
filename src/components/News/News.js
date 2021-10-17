@@ -51,6 +51,7 @@ export default function News() {
         </div>
         <div className="news-tab">
           <span
+            className={postsIndex === 0 && "active"}
             onClick={(e) => {
               console.log(e.target);
               setPostsIndex(0);
@@ -59,6 +60,7 @@ export default function News() {
             ƯU ĐÃI ĐẶC BIỆT
           </span>
           <span
+            className={postsIndex === 1 && "active"}
             onClick={(e) => {
               console.log(e.target);
               setPostsIndex(1);
@@ -67,6 +69,7 @@ export default function News() {
             CẬP NHẬT TỪ NHÀ
           </span>
           <span
+            className={postsIndex === 2 && "active"}
             onClick={(e) => {
               console.log(e.target);
               setPostsIndex(2);

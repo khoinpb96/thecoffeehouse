@@ -6,7 +6,8 @@
 .category-card {
   padding: 0.5rem 1rem;
   margin-bottom: 14px;
-  a {
+  span {
+    cursor: pointer;
   }
   .circle {
     display: flex;
@@ -16,6 +17,15 @@
     height: 86px;
     border-radius: 50%;
     background: #f2f2f2;
+
+    &.active {
+      background: radial-gradient(
+        100% 488.28% at 0 100%,
+        #e87800 0,
+        #fa8c16 100%
+      );
+    }
+
     img {
       height: 80%;
     }
