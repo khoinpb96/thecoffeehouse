@@ -21,3 +21,21 @@ main {
   /*padding for navbar visibility*/
   padding-top: 80px;
 }
+
+.terms h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(250, 140, 22);
+}
+
+.terms h4 {
+  margin: 1rem 0;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.75rem;
+}
+.terms p {
+  font-weight: 400;
+  margin: 0.2rem;
+}

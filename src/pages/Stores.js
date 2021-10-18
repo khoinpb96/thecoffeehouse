@@ -1,5 +1,11 @@
-import React from "react";
+import Slider from "../components/Slider/Slider";
+import StoresList from "../components/StoresList/StoresList";
 
 export default function Stores() {
-  return <div>Stores Page</div>;
+  return (
+    <main>
+      <Slider />
+      <StoresList />
+    </main>
+  );
 }

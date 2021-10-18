@@ -54,10 +54,10 @@ export default function Footer() {
                 <span onClick={showList}>Điều khoản sử dụng</span>
                 <ul>
                   <li>
-                    <Link to="/">Quy chế website</Link>
+                    <Link to="/terms">Quy chế website</Link>
                   </li>
                   <li>
-                    <Link to="/">Bảo mật thông tin</Link>
+                    <Link to="/policy">Bảo mật thông tin</Link>
                   </li>
                 </ul>
                 <div className="line" />

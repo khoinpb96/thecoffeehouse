@@ -43,9 +43,9 @@ export default function Slider() {
           arrows: false,
         }}
       >
-        {slideData.map((slide) => {
+        {slideData.map((slide, index) => {
           return (
-            <SplideSlide>
+            <SplideSlide key={index}>
               <img src={slide["icon_web"]} alt="promo-banner" />
             </SplideSlide>
           );
