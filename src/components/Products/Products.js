@@ -1,15 +1,22 @@
-import Wrapper from "../UI/Wrapper";
-import "./Products.scss";
-import { useState, useEffect } from "react";
-import ItemList from "./ItemList/ItemList";
-import CategoryList from "./CategoryList/CategoryList";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import Wrapper from "../UI/Wrapper";
+import CategoryList from "./CategoryList/CategoryList";
+import ItemList from "./ItemList/ItemList";
+import "./Products.scss";
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement } from "../../features/counter/counterSlice";
 
 export default function Products() {
   const [menuData, setMenuData] = useState([]);
   const [listIndex, setListIndex] = useState(0);
   const [listData, setListData] = useState([]);
   const atHomePage = useLocation().pathname === "/";
+
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
+
+  console.log(count);
 
   useEffect(() => {
     fetch("https://api.thecoffeehouse.com/api/v5/menu", {

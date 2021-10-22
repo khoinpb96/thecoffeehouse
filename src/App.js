@@ -1,11 +1,11 @@
 import { BrowserRouter, Route } from "react-router-dom";
-import Blogs from "./pages/Blogs";
-import Home from "./pages/Home";
-import ProductListing from "./pages/ProductListing";
-import Stores from "./pages/Stores";
 import Footer from "./components/UI/Footer";
 import Navbar from "./components/UI/Navbar";
+import Blogs from "./pages/Blogs";
+import Home from "./pages/Home";
 import Policy from "./pages/Policy";
+import ProductListing from "./pages/ProductListing";
+import Stores from "./pages/Stores";
 import Terms from "./pages/Terms";
 
 function App() {
