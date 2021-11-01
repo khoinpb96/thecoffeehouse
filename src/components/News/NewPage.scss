@@ -1,0 +1,17 @@
+.new {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  p,
+  strong {
+    padding: 8px 0;
+  }
+}
+
+.kg-image {
+  width: 100%;
+  margin: 2rem 0;
+}

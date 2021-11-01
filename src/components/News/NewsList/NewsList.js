@@ -1,4 +1,5 @@
 import "./NewsList.scss";
+import { Link } from "react-router-dom";
 export default function NewsCard({ data, atHomePage }) {
   return (
     <div className="news-list" style={atHomePage ? {} : { marginBottom: 54 }}>
@@ -17,7 +18,9 @@ export default function NewsCard({ data, atHomePage }) {
                 Bạn mua 5 ly cà phê - Nhà tặng thêm 2 (Hạn sử dụng 10 ngày kể từ
                 ngày mua).
               </p>
-              <button>ĐỌC TIẾP</button>
+              <Link to={`/blogs/${post.id}`}>
+                <button>ĐỌC TIẾP</button>
+              </Link>
             </div>
           </div>
         );

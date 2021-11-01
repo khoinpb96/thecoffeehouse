@@ -37,7 +37,7 @@ export default function Navbar() {
         </Link>
         <ul className="nav-list">
           <li>
-            <Link to="/product-listing">Đặt hàng</Link>
+            <Link to="/products">Đặt hàng</Link>
           </li>
           <li>
             <Link to="/blogs">Tin tức</Link>

@@ -1,9 +1,9 @@
-import "./News.scss";
-import Wrapper from "../UI/Wrapper";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import NewsList from "./NewsList/NewsList";
 import { useLocation } from "react-router-dom";
+import RedirectLink from "../UI/RedirectLink";
+import Wrapper from "../UI/Wrapper";
+import "./News.scss";
+import NewsList from "./NewsList/NewsList";
 
 export default function News() {
   const [postsIndex, setPostsIndex] = useState(Math.floor(Math.random() * 3));
@@ -30,17 +30,12 @@ export default function News() {
       credentials: "omit",
     })
       .then((res) => res.json())
-      .then((data) => setPostsData(data.news[postsIndex].posts));
+      .then((data) => {
+        setPostsData(data.news[postsIndex].posts);
+      });
   }, [postsIndex]);
 
-  const redirectLink = (
-    <div className="product-redirect-link">
-      <Link to="/product-listing">
-        Xem tất cả
-        <i className="fa fa-arrow-right" />
-      </Link>
-    </div>
-  );
+  const navs = ["ƯU ĐÃI ĐẶC BIỆT", "CẬP NHẬT TỪ NHÀ", "#COFFEELOVER"];
 
   return (
     <section className="news">
@@ -49,41 +44,29 @@ export default function News() {
           <i className="fa fa-newspaper" />
           <span>{atHomePage ? "Tin Tức" : "Tin tức mới nhất"}</span>
         </div>
+
         <div className="news-tab">
-          <span
-            className={postsIndex === 0 ? "active" : undefined}
-            onClick={(e) => {
-              console.log(e.target);
-              setPostsIndex(0);
-            }}
-          >
-            ƯU ĐÃI ĐẶC BIỆT
-          </span>
-          <span
-            className={postsIndex === 1 ? "active" : undefined}
-            onClick={(e) => {
-              console.log(e.target);
-              setPostsIndex(1);
-            }}
-          >
-            CẬP NHẬT TỪ NHÀ
-          </span>
-          <span
-            className={postsIndex === 2 ? "active" : undefined}
-            onClick={(e) => {
-              console.log(e.target);
-              setPostsIndex(2);
-            }}
-          >
-            #COFFEELOVER
-          </span>
+          {navs.map((nav, index) => {
+            return (
+              <span
+                className={postsIndex === index ? "active" : undefined}
+                onClick={() => {
+                  setPostsIndex(index);
+                }}
+                key={nav}
+              >
+                {nav}
+              </span>
+            );
+          })}
         </div>
+
         <NewsList
           data={atHomePage ? postsData.slice(0, 8) : postsData}
           atHomePage={atHomePage}
         />
 
-        {atHomePage && redirectLink}
+        {atHomePage && <RedirectLink link="blogs" />}
       </Wrapper>
     </section>
   );

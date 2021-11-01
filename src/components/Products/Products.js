@@ -1,22 +1,16 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import RedirectLink from "../UI/RedirectLink";
 import Wrapper from "../UI/Wrapper";
 import CategoryList from "./CategoryList/CategoryList";
 import ItemList from "./ItemList/ItemList";
 import "./Products.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../../features/counter/counterSlice";
 
 export default function Products() {
   const [menuData, setMenuData] = useState([]);
   const [listIndex, setListIndex] = useState(0);
   const [listData, setListData] = useState([]);
   const atHomePage = useLocation().pathname === "/";
-
-  const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
-
-  console.log(count);
 
   useEffect(() => {
     fetch("https://api.thecoffeehouse.com/api/v5/menu", {
@@ -54,7 +48,7 @@ export default function Products() {
     <section className="products">
       <Wrapper>
         <div className="products-title">
-          <i className="fas fa-trophy"></i>
+          <i className="fas fa-trophy" />
           <span>Sản phẩm từ Nhà</span>
         </div>
 
@@ -65,10 +59,13 @@ export default function Products() {
           }}
           listIndex={listIndex}
         />
+
         <ItemList
           data={atHomePage ? listData.slice(0, 12) : listData}
           atHomePage={atHomePage}
         />
+
+        {atHomePage && <RedirectLink link="products" />}
       </Wrapper>
     </section>
   );
